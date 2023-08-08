@@ -63,7 +63,7 @@ const Post = ({post}) => {
 
           <Modal modalOpen={openModalEdit} setModalOpen={setOpenModalEdit}>
           <form className='w-full' onSubmit={handleEditSubmit}>
-            <h1 className='text-2xl pb-3'>Add New Post</h1>
+            <h1 className='text-2xl pb-3'>Add New Cuisines</h1>
             
            <input
               type="text"
@@ -84,13 +84,14 @@ const Post = ({post}) => {
             />
 
            <button type='submit' className='bg-blue-700 text-white px-5 py-2'>Submit</button>
+          
           </form>
        </Modal>
 
           <button onClick={() =>   setOpenModalDelete(true)}className='text-red-700 mr-3'>Delete</button>
 
           <Modal modalOpen={openModalDelete} setModalOpen={setOpenModalDelete}>
-               <h1 className='text-2xl pb-3'>Are you sure, You want to delete this post?</h1>
+               <h1 className='text-2xl pb-3'>Are you sure, You want to delete this cuisines?</h1>
 
                <div>
                 <button onClick={() => handleDeletePost(post.id)} className='text-blue-700 font-bold mr-5'>YES</button>

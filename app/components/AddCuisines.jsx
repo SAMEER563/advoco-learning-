@@ -5,7 +5,7 @@ import Modal from "./Modal"
 import axios from 'axios'
 import { useRouter  } from 'next/navigation'
 
-const AddPost = () => {
+const AddCuisines = () => {
 
   const router = useRouter();
 
@@ -36,11 +36,11 @@ const AddPost = () => {
     }
   return (
     <div>
-        <button onClick={() => setModalOpen(true)} className='bg-blue-700 text-white p-3 cursor-pointer'>Add New Post</button>
+        <button onClick={() => setModalOpen(true)} className='bg-green-500 text-white p-3 cursor-pointer'>Add New Cuisines</button>
 
        <Modal modalOpen={modalOpen} setModalOpen={setModalOpen}>
           <form className='w-full' onSubmit={handleSubmit}>
-            <h1 className='text-2xl pb-3'>Add New Post</h1>
+            <h1 className='text-2xl pb-3'>Add New Cuisines</h1>
             
            <input
               type="text"
@@ -61,10 +61,11 @@ const AddPost = () => {
             />
 
            <button type='submit' className='bg-blue-700 text-white px-5 py-2'>Submit</button>
+           <button type="submit" className='bg-red-700 text-white px-5 py-2' onClick={() => setModalOpen(false)}>Cancel</button>
           </form>
        </Modal>
     </div>
   )
 }
 
-export default AddPost
+export default AddCuisines

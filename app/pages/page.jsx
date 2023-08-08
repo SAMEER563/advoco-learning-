@@ -18,9 +18,10 @@ const Posts = async () => {
     const [posts, users] = await Promise.all([getPostData(), getUsersData()])
 
   return (
-    <div>
-        <h1 className="text-4xl">Posts Page</h1>
-
+   
+      <div >
+        <Link href="/">Admin Panel</Link>
+        <h1 className="text-4xl"> Pages</h1>
         <h2 className='text-2xl'>Users</h2>
 
         {
@@ -43,6 +44,7 @@ const Posts = async () => {
             }
         </ul>
     </div>
+    
   )
 }
 
