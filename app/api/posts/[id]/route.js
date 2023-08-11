@@ -29,7 +29,7 @@ return NextResponse.json(post);
 export const PATCH = async (request, {params}) => {
     try {
         const body = await request.json();
-        const {title, description} = body;
+        const {title, description, address} = body;
 
         const {id} = params;
 
@@ -39,7 +39,8 @@ export const PATCH = async (request, {params}) => {
             },
             data: {
                 title,
-                description
+                description,
+                address
             }
         })
 

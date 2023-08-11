@@ -5,7 +5,7 @@ import Modal from "./Modal"
 import axios from 'axios'
 import { useRouter  } from 'next/navigation'
 
-const AddCuisines = () => {
+const AddRestaurants = () => {
 
   const router = useRouter();
 
@@ -36,16 +36,15 @@ const AddCuisines = () => {
     }
   return (
     <div>
-        <button onClick={() => setModalOpen(true)} className='bg-green-500 text-white p-3 cursor-pointer'>Add New Cuisines</button>
+        <button onClick={() => setModalOpen(true)} className='bg-green-500 text-white p-3 cursor-pointer'>Add New Restaurant</button>
 
        <Modal modalOpen={modalOpen} setModalOpen={setModalOpen}>
           <form className='w-full' onSubmit={handleSubmit}>
-            <h1 className='text-2xl pb-3'>Add New Cuisines</h1>
-            
+            <h1 className='text-2xl pb-3'>Add New Restaurant</h1>
             
            <input
               type="text"
-              placeholder='Title'
+              placeholder='Restaurant name'
               name='title'
               className='w-full p-2' 
               value={inputs.title || ""}
@@ -61,6 +60,15 @@ const AddCuisines = () => {
               onChange={handleChange}
             />
 
+<input
+              type="text"
+              placeholder='Address'
+              name='address'
+              className='w-full p-2 my-5' 
+              value={inputs.address || ""}
+              onChange={handleChange}
+            />
+
            <button type='submit' className='bg-blue-700 text-white px-5 py-2'>Submit</button>
            <button type="submit" className='bg-red-700 text-white px-5 py-2' onClick={() => setModalOpen(false)}>Cancel</button>
           </form>
@@ -69,4 +77,4 @@ const AddCuisines = () => {
   )
 }
 
-export default AddCuisines
+export default AddRestaurants

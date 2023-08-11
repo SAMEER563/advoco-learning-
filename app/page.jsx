@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+// import { FaBowlFood } from 'react-icons/fa';
 import {FcAdvertising} from "react-icons/fc";
 import {GoLocation} from "react-icons/go";
 import {LuHotel} from "react-icons/lu";
 import {FiSettings} from "react-icons/fi";
 import {SiPowerpages} from "react-icons/si";
-// import { FaBowlFood } from 'react-icons/fa';
 
 export const Homepage = () => {
   return (
@@ -15,6 +15,7 @@ export const Homepage = () => {
       <h1 className='text-4xl pb-4'>Homepage </h1>
       <ul>
         <li className='pl-9 pt-4 flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-2'>
+          {/* <FaBowlFood className='mr-2' /> */}
           <Link href="/cuisines">Cuisines</Link></li>
 
       <li className='flex justify-start items-center hover:bg-blue-200 hover:text-blue-800 rounded-xl p-2'>
